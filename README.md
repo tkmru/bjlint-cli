@@ -38,41 +38,30 @@ $ go run ./cmd/bjlint
 
 Available actions are shown automatically. Use the up and down arrow keys to select one and press Enter to play it. Typing remains available: commands are case-insensitive, and you can use `h`/`hit`, `s`/`stand`, `d`/`double`, `p`/`split`, or `q`/`quit`/`exit`.
 
-The game redraws the current table in place after every command instead of appending each state to the terminal. The previous round's result remains visible above the newly dealt hand until the next action.
+The game redraws the current table in place after every command instead of appending each state to the terminal. The previous round's result remains visible above the newly dealt hand until the next action. A typical screen looks like this (colors omitted):
 
 ```text
 $ bjlint
 
-bjlint-cli
-Blackjack Basic Strategy Trainer
+╭─ BJ LINT ─────────────────────────────────────────────╮
+│ Basic Strategy Trainer  6D • H17 • DAS • BJ 3:2       │
+╰───────────────────────────────────────────────────────╯
 
-Rules:
-  6 decks / H17 / DAS / Blackjack 3:2
+  BANKROLL  $100.00    BET  $10.00    SHOE  308/312
 
-Bankroll: $100.00
-Bet:       $10.00
+  DEALER    [ 6 ♠ ] [ ?  ]
+  PLAYER    [ 10♣ ] [ 6 ♥ ]
+  TOTAL     HARD 16
+  STRATEGY  STAND
 
-Dealer:
-  [6] [?]
+  ACTIONS   [H] Hit    [S] Stand    [D] Double    [Q] Quit
+  ↑/↓ select • Enter confirms • Type a key or command • Q quits
 
-Player:
-  [10] [6]
-
-Total: 16
-Basic Strategy: STAND
-
-> hit
-
-⚠ WARNING: Basic Strategy recommends STAND.
-You chose HIT.
-
-Player:
-  [10] [6] [4]
-
-Total: 20
-Basic Strategy: STAND
-
-> stand
+YOUR MOVE ›
+ hit     Hit another card
+ stand   Stand with current hand
+ double  Double the bet and draw one card
+ quit    Quit bjlint
 ```
 
 ## Rules
