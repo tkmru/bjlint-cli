@@ -1,0 +1,18 @@
+# Local Go build artifacts
+/bjlint
+/bin/
+/dist/
+/coverage/
+*.test
+*.out
+*.prof
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/
